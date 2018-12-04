@@ -2,7 +2,6 @@ package com.boeing.drone;
 
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -16,7 +15,7 @@ public class DroneController {
     }
 
     @GetMapping("")
-    public Iterable<Drone> all(){
+    public List<Drone> all(){
         return this.droneRepository.findAll();
     }
 
